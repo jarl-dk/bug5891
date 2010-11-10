@@ -14,7 +14,7 @@ class NotesController < ApplicationController
   # GET /notes/1.xml
   def show
     @note = Note.find(params[:id])
-
+    str = render_to_string(:template => 'notes/new.html')
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @note }
