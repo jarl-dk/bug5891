@@ -23,6 +23,7 @@ class NotesControllerTest < ActionController::TestCase
   test "should show note" do
     get :show, :id => notes(:one).to_param
     assert_response :success
+    assert_template :show
   end
 
   test "should get edit" do
